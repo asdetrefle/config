@@ -1,0 +1,50 @@
+[backtest]
+strategy_type = "hitter"
+country = "HK"
+portfolio_id = "HK"
+debug_orderbook = false
+start_time = "09:30:00"
+time_zone = "Asia/Hong_Kong"
+strat_log_path = "$HOME/research/backtest"
+
+[matching_engine]
+matching_type = "realistic"     # other choices are: simplistic
+feed_latency_us = 0
+order_latency_us = 20
+fill_latency_us = 30
+
+[tick_data]
+
+    [[tick_data.record]]
+    format = "tick"
+    exchange = "XHKG"
+    path = "$HOME/data/xhkg/"
+
+    [[tick_data.record]]
+    format = "tick"
+    exchange = "XHKF"
+    path = "$HOME/data/xhkg/"
+
+[sql]
+backend = "postgres"
+server = "aquila"
+login = "qijiec"
+password = "qijiec"
+database = "siriprod"
+port = 5432
+
+[log]
+file = "$HOME/logs/sirius/"
+cout = false
+level = "DEBUG"
+exclude_tags = false
+
+[[strategy]]
+run_period_ms = 100
+optim_operiod_ms = 100
+log_period_ms = 1000
+model = "model_0"
+library = "libautomat.dlib"
+log_period_ms = 1000
+log_file = "optimizer_1"
+misc_symbols = ""   # e.g. "USDCNY,USDTWD"
