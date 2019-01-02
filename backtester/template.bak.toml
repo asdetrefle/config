@@ -8,22 +8,20 @@ time_zone = "Asia/Hong_Kong"
 strat_log_path = "$HOME/research/backtest"
 
 [matching_engine]
-matching_type = "realistic"     # other choices are: simplistic
+matching_type = "realistic"
 feed_latency_us = 0
 order_latency_us = 20
 fill_latency_us = 30
 
-[tick_data]
+[[raw_data]]
+format = "tick"
+exchange = "XHKG"
+path = "$HOME/data/xhkg/"
 
-    [[tick_data.record]]
-    format = "tick"
-    exchange = "XHKG"
-    path = "$HOME/data/xhkg/"
-
-    [[tick_data.record]]
-    format = "tick"
-    exchange = "XHKF"
-    path = "$HOME/data/xhkg/"
+[[raw_data]]
+format = "tick"
+exchange = "XHKF"
+path = "$HOME/data/xhkg/"
 
 [sql]
 backend = "postgres"
@@ -35,9 +33,8 @@ port = 5432
 
 [log]
 file = "$HOME/logs/sirius/"
-cout = false
 level = "DEBUG"
-exclude_tags = false
+async = false
 
 [[strategy]]
 optim_operiod_ms = 100
@@ -48,4 +45,4 @@ universe = "HKALL"
 model = "model_0"
 sub_portfolio_id = 0
 log_file = "optimizer_1"
-misc_symbols = ""   # e.g. "USDCNY,USDTWD"
+
