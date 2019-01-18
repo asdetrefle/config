@@ -40,7 +40,7 @@ level = "DEBUG"
 exclude_tags = false
 
 [[strategy]]
-optim_operiod_ms = 100
+optim_period_ms = 500
 run_period_ms = 100
 log_period_ms = 1000
 library = "libautomat.dlib"
