@@ -1,0 +1,47 @@
+[trading_engine]
+strategy_type = "hitter"
+country = "HK"
+portfolio_id = "HK"
+time_zone = "Asia/Hong_Kong"
+strat_location = "$HOME/automat/lib"
+strat_log_location = "$HOME/prod/log"
+
+[risk]
+active = true
+inter_order_ms = 3
+
+[sql]
+backend = "postgres"
+server = "aquila"
+login = "qijiec"
+password = "qijiec"
+database = "siriprod"
+port = 5432
+
+[log]
+file = "$HOME/logs/sirius/"
+cout = false
+level = "DEBUG"
+exclude_tags = false
+
+[services]
+name = "trading_engine"
+host = "aquila"
+rep_port = "63010"
+pull_port = "63011"
+pub_port = "tcp://*:63012"
+heartbeat_period_ms = 1000
+
+[reuters]
+server = "trhhk3slsp08a03:14002"
+user = "HK3_02_HKMA_HK37000"
+    
+    [[reuters.exchange]]
+        mic = "XSHG"
+        orderbook_suffix = "d"
+
+    [[reuters.exchange]]
+        mic = "XSHE"
+
+    [[reuters.exchange]]
+        mic = "XSIM"
