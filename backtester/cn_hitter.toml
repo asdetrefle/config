@@ -1,10 +1,10 @@
 [backtest]
-strategy_type = "hitter"
-country = "HK"
-portfolio_id = "HK"
+country = "CN"
+portfolio = "CN"
 debug_orderbook = false
 start_time = "09:30:00"
-time_zone = "Asia/Hong_Kong"
+time_zone = "Asia/Shanghai"
+strat_path = "$HOME/automat/hitter/build"
 strat_log_path = "$HOME/research/backtest"
 
 [matching_engine]
@@ -37,15 +37,18 @@ port = 5432
 file = "backtester"
 cout = false
 level = "DEBUG"
-exclude_tags = false
+exclude_tags = []
 
 [[strategy]]
-optim_period_ms = 500
-run_period_ms = 100
-log_period_ms = 1000
-library = "libautomat.dlib"
-universe = "HKALL"
+config = "cn_test_1"
+universe = [".CSI300"]
+partition = ["capi", "sector"]
 model = "model_0"
-sub_portfolio_id = 0
+automaton_type = "hitter"
+library = "libautomat.so"
+sub_portfolio_id = 1
+run_period_ms = 100
+optim_period_ms = 500
+log_period_ms = 1000
 log_file = "optimizer_1"
-misc_symbols = ""   # e.g. "USDCNY,USDTWD"
+misc_symbols = []   # e.g. ["USDCNY", "USDTWD"]
