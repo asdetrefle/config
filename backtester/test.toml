@@ -1,0 +1,38 @@
+[[strategy]]
+	config = "cn_prod_1"
+    toto = "titi"
+[log]
+	exclude_tags = []
+	level = "DEBUG"
+	file = "backtester"
+	cout = false
+[sql]
+	password = "qijiec"
+	login = "qijiec"
+	database = "siriprod"
+	backend = "postgres"
+	port = 5432
+	server = "aquila"
+[tick_data]
+	[[tick_data.record]]
+		path = "$HOME/data/xhkg/"
+		format = "tick"
+		exchange = "XHKG"
+	[[tick_data.record]]
+		path = "$HOME/data/xhkg/"
+		format = "tick"
+		exchange = "XHKF"
+[backtest]
+	strat_path = "$HOME/automat/hitter/build"
+	portfolio = "CN"
+	start_time = "09:30:00"
+	country = "CN"
+	debug_orderbook = false
+	strat_log_path = "$HOME/research/backtest"
+	time_zone = "Asia/Shanghai"
+	strategy = ["cn_prod_1"]
+[matching_engine]
+	fill_latency_us = 30
+	order_latency_us = 20
+	matching_type = "realistic"
+	feed_latency_us = 0
