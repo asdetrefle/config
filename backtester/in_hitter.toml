@@ -1,7 +1,7 @@
-country = "CN"
+country = "IN"
 debug_orderbook = false
-start_time = "09:20:00"
-time_zone = "Asia/Shanghai"
+start_time = "09:15:00"
+time_zone = "Asia/Kolkata"
 strat_path = "$HOME/dev/automat/lib"
 log_path = "$HOME/data/backtest"
 load_database_positions = 1
@@ -44,15 +44,9 @@ order_latency_us = 20
 fill_latency_us = 30
 
 [pnl]
-    [[pnl.fees]]
-    exchange = "XSHG"
-    rates = { STOCK = [1.8, 11.8], ETF = [0.75, 0.75], CONVERTIBLE_BOND = [0.3, 0.3] }
-    special_rates = { "CN1DRPO=SS" = [0.1, 0.1], "CN2DRPO=SS" = [0.2, 0.2] }
+pnl_decomposed = true
 
     [[pnl.fees]]
-    exchange = "XSHE"
-    rates = { STOCK = [1.8, 11.8], CONVERTIBLE_BOND = [0.7, 0.7] }
+    exchange = "XNSE"
+    rates = { SSF = [ 1, 1 ], FUTURE = [ 1, 1 ] }
 
-    [[pnl.fees]]
-    exchange = "CCFX"
-    rates = { FUTURE = [0.25, 0.25, 3.5] }
