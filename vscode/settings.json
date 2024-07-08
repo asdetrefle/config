@@ -1,0 +1,98 @@
+{
+    "editor.fontSize": 12,
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "One Dark Pro",
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "workbench.colorCustomizations": {
+        "terminal.background": "#14161a"
+    },
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.rendererType": "dom",
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/._*": true,
+        "**/build": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.so": true,
+        "**/.a": true,
+    },
+    "files.watcherExclude": {
+        "**/build/**": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+    },
+    "http.proxySupport": "off",
+    "editor.detectIndentation": false,
+    "editor.autoIndent": "full",
+    "[C_Cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+    },
+    "C_Cpp.clang_format_style": "{BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4, NamespaceIndentation: None}",
+    "C_Cpp.clang_format_sortIncludes": false,
+    "git.confirmSync": false,
+    "tabnine.experimentalAutoImports": true,
+    "cmake.configureOnOpen": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "debug.console.closeOnEnd": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "cmake.configureOnEdit": false,
+    "terminal.integrated.scrollback": 10000,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "git.ignoreLegacyWarning": true,
+    "dart.openDevTools": "flutter",
+    "autopep8.args": [
+        "--max-line-length=88"
+    ],
+    "dart.lineLength": 88,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.inlineSuggest.showToolbar": "always",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "jupyter.allowUnauthorizedRemoteConnection": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "cmake.showOptionsMovedNotification": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+}
